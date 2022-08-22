@@ -19,8 +19,27 @@ state()
 
 
 function playRound(computerChoice,playerChoice) {
-    if (computerChoice == playerChoice) {
+    if (computerChoice== choices[0] && playerChoice == choices[1]) {
+        state()
+        console.log("You Win! Paper beats Rock")
+    } else if (computerChoice== choices[0] && playerChoice == choices[2]) {
+        state()
+        console.log("You Lose! Rock beats Scissors")
+    } else if (computerChoice== choices[1] && playerChoice == choices[0]) {
+        state()
+        console.log("You Lose! Paper beats Rock")
+    } else if (computerChoice== choices[1] && playerChoice == choices[2]) {
+        state()
+        console.log("You Win! Scissors beats Paper")
+    } else if (computerChoice== choices[2] && playerChoice == choices[0]) {
+        state()
+        console.log("You win! Rock beats Scissors")
+    } else if (computerChoice== choices[2] && playerChoice == choices[1]) {
+        state()
+        console.log("You Lose! Scissors beats Paper")
+    } else {
         state()
         console.log("It's a Draw.")
+    }
     }
 playRound()

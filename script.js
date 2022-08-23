@@ -1,4 +1,5 @@
 const choices = ["ROCK", "PAPER", "SCISSORS"]
+const rounds = parseInt(prompt("how many rounds you want to play."))
 function getComputerChoice() {
     var index =  Math.floor(Math.random() * choices.length);
     var computer = choices[index];
@@ -35,7 +36,7 @@ function playRound(computerChoice, playerChoice) {
 }
 
 function game() {
-    for (let i=0; i < 5; i++) {
+    for (let i=0; i < rounds; i++) {
         computerChoice = getComputerChoice();
         playerChoice = getPlayerChoice();
         playRound(computerChoice,playerChoice);
